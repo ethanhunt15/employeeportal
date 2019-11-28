@@ -56,7 +56,7 @@ public class EmployeeController {
 		}
 		
 		
-		return  new ResponseEntity<>(employeeService.registerEmployee(registrationRequest, request), HttpStatus.OK);
+		return  new ResponseEntity<>(employeeService.registerEmployee(registrationRequest), HttpStatus.OK);
 
 	}
 

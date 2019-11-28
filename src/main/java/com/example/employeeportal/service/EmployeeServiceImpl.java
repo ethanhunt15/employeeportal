@@ -5,8 +5,6 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,14 +20,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 	EmployeeRepository employeeRepository;
 	
 	@Override
-	public Object registerEmployee(RegistrationRequest registrationRequest, HttpServletRequest request)
+	public Employee registerEmployee(RegistrationRequest registrationRequest)
 	{
 		Employee employee = new Employee();
 		BeanUtils.copyProperties(registrationRequest, employee);
 		employee.setRegistrationDate(new Date());
-		employeeRepository.save(employee);
 		
-		return "Registration successful";
+		return employeeRepository.save(employee);
 	}
 
 	@Override
