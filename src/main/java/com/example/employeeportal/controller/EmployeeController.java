@@ -63,6 +63,6 @@ public class EmployeeController {
 	@GetMapping("/employees")
 	public List<Employee> employees(HttpServletRequest request) throws JsonProcessingException 
 	{
-		return  employeeService.employees(request);
+		return  employeeService.employees();
 	}
 }
