@@ -16,7 +16,7 @@ public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Integer id;
+	private long id;
 	private String firstName;
 	private String lastName;
 	private int gender; //1-male, 2-female
@@ -56,7 +56,10 @@ public class Employee {
 	}
 	
 	
-	public Integer getId() {
+	public void setId(long id) {
+		this.id = id;
+	}
+	public Long getId() {
 		return id;
 	}
 	

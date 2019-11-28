@@ -7,5 +7,5 @@ import com.example.employeeportal.request.RegistrationRequest;
 public interface EmployeeService {
 	Object registerEmployee(RegistrationRequest registrationRequest, HttpServletRequest request);
 
-	Object employees(HttpServletRequest request);
+	Object employees();
 }

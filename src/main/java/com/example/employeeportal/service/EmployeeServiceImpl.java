@@ -33,7 +33,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public List<Employee> employees(HttpServletRequest request)
+	public List<Employee> employees()
 	{
 		List<Employee> employeeList = employeeRepository.findAll();
 		Comparator<Employee> compareById = (Employee o1, Employee o2) -> o1.getFirstName().compareTo( o2.getFirstName() );
